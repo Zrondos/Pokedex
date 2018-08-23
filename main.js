@@ -21,7 +21,6 @@ class Trainer{
         alert("I don't have that Pokemon...yet!") 
     }
 }
-
 class Pokemon{
     constructor(data){
         this.name=data.name
@@ -40,7 +39,6 @@ class Pokemon{
     }
 }
 let pokemonTrainer = new Trainer("Pokemon Master")
-
 //Axios Call for Ninetales
 let ninetalesCall = axios.get('https://fizal.me/pokeapi/api/38.json')
 let garchompCall = axios.get('https://fizal.me/pokeapi/api/445.json')
@@ -57,20 +55,32 @@ axios.all([ninetalesCall, garchompCall, tapuKokoCall])
     let tapuKoko = new Pokemon(responses[2].data)
     pokemonTrainer.myPokemon.push(tapuKoko)
 
-    // console.log(pokemonTrainer)
-    // console.log(pokemonTrainer.get("ninetales"))
+    console.log(tapuKoko);
+
+    function changePhoto(pokemonName,type){
+        myObject=pokemonName+"Object";
+        photo=myObject.type;
+        gallery.innerHTML = " "; 
+        gallery.style.backgroundImage=`url(${photo})`;
+    }
+    function changePhoto(inputPhoto){
+        let gallery = document.querySelector('.mainWindow');
+        gallery.innerHTML = " "; 
+        gallery.style.backgroundImage=`url(${inputPhoto})`
+    }
     function displayStats(pokemon){
-            //display HP stats
+
             let hpElement=document.createElement("li");
             var hp=document.createTextNode("Hp:"+pokemon.Hp)
-            // hpElement.appendChild(hp);
-            // stats=document.getElementsByClassName("statsList")
-            // stats[0].appendChild(hpElement)
+            hpElement.appendChild(hp);
+            stats=document.getElementsByClassName("statsList")
+            stats[0].innerHTML = " ";
+            stats[0].appendChild(hpElement)
             ////display HP stats
             let AttackElement=document.createElement("li");
             var Attack=document.createTextNode("Attack:"+pokemon.Attack)
             AttackElement.appendChild(Attack);
-            stats=document.getElementsByClassName("statsList")
+            stats=document.getElementsByClassName("statsList");
             stats[0].appendChild(AttackElement)
             ////display Defense stats
             let DefenseElement=document.createElement("li");
@@ -97,17 +107,47 @@ axios.all([ninetalesCall, garchompCall, tapuKokoCall])
             stats=document.getElementsByClassName("statsList")
             stats[0].appendChild(Speed)
         }
-        // currentPokemon=document.getElementById("ninetalesCard").addEventListener("click", function(){return ninetales});
-        // currentPokemon=document.getElementById("tapuKokoCard").addEventListener("click", function(){return tapuKoko});
-        // currentPokemon=document.getElementById("garchompCard").addEventListener("click", function(){return garchomp});
+
+        function displayMoves(pokemon){
+            // amountOfMoves=pokemon.moves
+            // console.log(pokemon.moves);
+            // for (i=0; i<3; i++){
+            // randNum=Math.floor((Math.random() * amountOfMoves) + 1);
+            // move=pokemon.moves[randNum].name;
+            // console.log(move)
+            // moveNumber="move"+i;
+            // document.getElementById("moveNumber").innerHTML=move;
+            // }
+        }
 
         document.getElementById("ninetalesCard").addEventListener("click", function(){displayStats(ninetales)});
         document.getElementById("tapuKokoCard").addEventListener("click", function(){displayStats(tapuKoko)});
         document.getElementById("garchompCard").addEventListener("click", function(){displayStats(garchomp)});
+        document.getElementById("ninetalesCard").addEventListener("click", function(){displayMoves(ninetales)});
+        document.getElementById("tapuKokoCard").addEventListener("click", function(){displayMoves(tapuKoko)});
+        document.getElementById("garchompCard").addEventListener("click", function(){displayMoves(garchomp)});
+
+
+        document.getElementById("profileCard").addEventListener("click", function(){changePhoto("Assets/pokemonTrainer.png")});
+        document.getElementById("ninetalesCard").addEventListener("click", function(){changePhoto("Assets/Gifs/Ninetales.gif")});
+        document.getElementById("ninetalesCard").addEventListener("click", function(){changePhoto("Assets/Gifs/Ninetales.gif")});
+        document.getElementById("tapuKokoCard").addEventListener("click", function(){changePhoto("Assets/Gifs/TapuKoko.gif")});
+        document.getElementById("garchompCard").addEventListener("click", function(){changePhoto("Assets/Gifs/Garchomp.gif")});
+        
 });
+    
 
-var ninetalesArray=["Assets/Gifs/alolanninetales.gif","Assets/Gifs/ShinyAlolanNinetales.gif", "Assets/Gifs/Ninetales.gif", "Assets/Gifs/ShinyNinetales.gif"]
-var garchompArray=["Assets/Gifs/Garchomp.gif","Assets/Gifs/ShinyGarchomp.gif"]
-var tapuKokoArray=["Assets/Gifs/TapuKoko.gif", "Assets/Gifs/TapuKokoShiny.gif"]
+var ninetalesObject={alolan: "Assets/Gifs/alolanninetales.gif", alolanShiny:"Assets/Gifs/ShinyAlolanNinetales.gif", regular:"Assets/Gifs/Ninetales.gif", shinyRegular:"Assets/Gifs/ShinyNinetales.gif"}
+var garchompObject={regularGarchomp: "Assets/Gifs/Garchomp.gif", shinyRegularGarchomp: "Assets/Gifs/ShinyGarchomp.gif"}
+var tapuKokoObject={regularTapuKoko:"Assets/Gifs/TapuKoko.gif", shinyTapuKoko:"Assets/Gifs/TapuKokoShiny.gif"}
 
+
+var photosObject={alolanNinetales: "Assets/Gifs/alolanninetales.gif", 
+                alolanShinyNinetales:"Assets/Gifs/ShinyAlolanNinetales.gif", 
+                regularNinetales:"Assets/Gifs/Ninetales.gif", 
+                shinyRegularNinetales:"Assets/Gifs/ShinyNinetales.gif",
+                regularGarchomp: "Assets/Gifs/Garchomp.gif", 
+                shinyRegularGarchomp: "Assets/Gifs/ShinyGarchomp.gif",
+                regularTapuKoko:"Assets/Gifs/TapuKoko.gif", 
+                shinyTapuKoko:"Assets/Gifs/TapuKokoShiny.gif"}
 
