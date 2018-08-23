@@ -13,12 +13,12 @@
     <link rel="stylesheet" href="main.css">
 </head>
 <body> 
-    <h1>Zach's </h1>
+    <h1>Pokemon Master Zach's Team</h1>
     <div class="row">
         <div class="col s3 m3 l3">
-            <div class="card">
+            <div class="card" id="profileCard">
                 <div class="card-image">
-                <img src="Assets/ProfilePic.jpg">
+                <img src="Assets/pokemonTrainer.png">
                 </div>
                 <div class="card-content">
                 <p class="name"><strong>Pokemon Trainer</strong></p>
@@ -60,7 +60,7 @@
       </div>
       <div class="row">
           <div class="mainWindow col s6 m6 l6">
-            <div class="square">
+            <div class="square" id="square">
               <!-- <img class="GarchompGif" src="Assets/Gifs/Garchomp.gif"> -->
               <!-- <img class="AlolanNinetales" src="Assets/Gifs/AlolanNinetales.gif"> -->
             </div>
@@ -77,25 +77,27 @@
                 <ul class="collapsible">
                         <li>
                           <div class="collapsible-header">Move 1</div>
-                          <div class="collapsible-body"><span>Lorem ipsum dolor sit amet.</span></div>
+                          <div class="collapsible-body"><span id="move1"></span></div>
                         </li>
                         <li>
                           <div class="collapsible-header">Move 2</div>
-                          <div class="collapsible-body"><span>Lorem ipsum dolor sit amet.</span></div>
+                          <div class="collapsible-body"><span id="move2"></span></div>
                         </li>
                         <li>
                           <div class="collapsible-header">Move 3</div>
-                          <div class="collapsible-body"><span>Lorem ipsum dolor sit amet.</span></div>
+                          <div class="collapsible-body"><span id="move3"></span></div>
                         </li>
                         <li>
                             <div class="collapsible-header">Move 4</div>
-                            <div class="collapsible-body"><span>Lorem ipsum dolor sit amet.</span></div>
+                            <div class="collapsible-body"><span id="move4"></span></div>
                         </li>
                       </ul>
           </div>
       </div>
-      <a class="waves-effect waves-light btn">Regular/Shiny</a>
-      <a class="waves-effect waves-light btn">Button 2</a>
+      <a class="waves-effect waves-light btn">Regular Form</a>
+      <a class="waves-effect waves-light btn">Shiny Form</a>
+      <a class="waves-effect waves-light btn">Alolan Form</a>
+      <a class="waves-effect waves-light btn">Shiny Alolan Form</a>
 <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-rc.2/js/materialize.min.js"></script>
 <script src="main.js"></script>

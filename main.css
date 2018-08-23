@@ -1,52 +1,57 @@
-.card-title{
-    color: black !important;
+.card-title {
+  color: black !important; }
 
-}
+.statsWindow {
+  background-image: url("Assets/background.jpg");
+  background-repeat: no-repeat;
+  background-size: cover; }
 
-.name{
-    font-size: 20px;
-}
+body {
+  background-image: url("Assets/background.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center; }
 
-.mainWindow{
-    border: 5px solid black;
-    /* background-image: url("Assets/Gifs/Ninetales.gif"); */
-    /* background-image: url("Assets/Gifs/ShinyNinetales.gif"); */
-    /* background-image: url("Assets/Gifs/alolanninetales.gif"); */
-    /* background-image: url("Assets/Gifs/ShinyAlolanNinetales.gif"); */
-    /* background-image: url("Assets/Gifs/TapuKoko.gif"); */
-    /* background-image: url("Assets/Gifs/TapuKokoShiny.gif"); */
-    /* background-image: url("Assets/Gifs/Garchomp.gif"); */
-    /* background-image: url("Assets/Gifs/ShinyGarchomp.gif"); */
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center;
-    width: 512px;
-    height:600px;
-}
+.name {
+  font-size: 20px; }
 
+.mainWindow {
+  background-image: url("Assets/pokemonTrainer.png");
+  border: 5px solid black;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  width: 512px;
+  height: 600px; }
 
-.garchompGif{
-    max-width:100%;
-    max-height:100%;
-}
+.garchompGif {
+  max-width: 100%;
+  max-height: 100%; }
 
-.statsWindow{
-    border: 5px solid black;
-    height: 600px;
-}
+.statsWindow {
+  border: 5px solid black;
+  height: 600px; }
 
-.statsTitle{
-    font-size: 30px;
-}
+.statsTitle {
+  font-size: 30px; }
 
-#garchompCard:hover{ 
-    border: 2px solid black;
-}
+#garchompCard:hover {
+  border: 2px solid black; }
 
-#ninetalesCard:hover{ 
-    border: 2px solid black;
-}
+#ninetalesCard:hover {
+  border: 2px solid black; }
 
-#tapuKokoCard:hover { 
-    border: 2px solid black;
-}
+#tapuKokoCard:hover {
+  border: 2px solid black; }
+
+#profileCard:hover {
+  border: 2px solid black; }
+
+.btn {
+  margin-left: 20px;
+  margin-bottom: 20px; }
+
+.collapsible-body {
+  background-color: white; }
+
+/*# sourceMappingURL=main.css.map */
